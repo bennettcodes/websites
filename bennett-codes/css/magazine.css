@@ -1,0 +1,79 @@
+    body, html { background-color:#000000; }
+    
+    #magazine-wrapper {
+        width:100%;
+        height:100vh;
+        position: relative;
+        margin:0;
+        float:left;
+        
+    }
+    
+    #magazine-container {
+        width:100%;
+        height:100vh;
+        position: relative;
+        margin:0;
+        float:left;
+        
+    }
+    
+    #magazine-front-left {
+        width: 50%;
+        position: relative;
+        float: left;
+        
+    }
+    
+    #magazine-front-right {
+        width: 50%;
+        position: relative;
+        float: left;
+        
+    }
+    
+    .magazine-inside {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 602;
+        
+    }
+    
+    .magazine-inside-left {
+        width: 50%;
+        position: relative;
+        float: left;
+        
+    }
+    
+    .magazine-inside-right {
+        width: 50%;
+        position: relative;
+        float: left;
+        
+    }
+    
+    #magazine-back {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 601;
+        
+    }
+    
+    #magazine-back-left {
+        width: 50%;
+        position: relative;
+        float: left;
+        
+    }
+    
+    #magazine-back-right {
+        width: 50%;
+        position: relative;
+        float: left;
+        
+    }

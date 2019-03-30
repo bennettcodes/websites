@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width:1024px) {
+	h1 {
+		font-size:9vw !important;	
+	}
+	
+	.section-body h2 {
+		font-size:6vw !important;	
+	}
+	
+	.section-body p {
+		font-size:3vw !important;	
+	}
+	
+	.desktop-break {
+		display:none !important;
+	}
+	
+	.mobile-publish-date {
+		font-weight:700 !important;
+	}
+
+    .section {
+        padding-left:0 !important;
+    }
+}

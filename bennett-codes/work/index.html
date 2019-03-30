@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-mobile.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <script src="http://bennettcodes.com/js/imagesloaded.pkgd.min.js"></script>
+    <script language=javascript>
+        switch (true) {
+            //        MOBILE REDIR
+        case (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) && (!(/iPad/i.test(navigator.userAgent))):
+            //            location.replace("../mobile/index.php#");
+            break;
+            //        TABLET REDIR
+        case (!(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) && (/iPad/i.test(navigator.userAgent)):
+            //            location.replace("../tablet");
+            break;
+            //        DESKTOP REDIR
+        default:
+            //            location.replace("../index.php#");
+            break;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <div id="name">Bennett Waisbren</div>
+
+            <div id="items">
+                <div class="item-group">
+                    <div class="item-group-header">Beachbody Prototypes</div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/bb/video/" class="item" target="_blank">Custom Video Player</a>
+                        <a href="http://bennettcodes.com/dev/bb/mobile-android-pins/" class="item" target="_blank">Workout List Filter (Mobile Only)</a>
+                        <a href="http://bennettcodes.com/dev/bb/mobile-new-nav/" class="item" target="_blank">New Navigation (Mobile Only)</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/bb/prototype/" class="item" target="_blank">Onboarding Wizard</a>
+                        <a href="http://bennettcodes.com/dev/bb/mobile-bb17-with-list/" class="item" target="_blank">Homepage Redesign (Mobile Only)</a>
+                        <a href="http://bennettcodes.com/dev/bb/amp/" class="item" target="_blank">AMP P90X3 Concept (Mobile Only)</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/bb/calendar/" class="item" target="_blank">Workout Calendar</a>
+                        <a href="http://bennettcodes.com/dev/bb/purchase-flow/" class="item" target="_blank">Purchase Flow</a>
+                        <a href="http://bennettcodes.com/dev/bb/mobile/" class="item" target="_blank">Program Rows (Mobile Only)</a>
+                    </div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-header"><span class="item-group-header-text">HTML5 Canvas Particles</span><a href="http://codepen.io/waisbren89/" target="_blank" id="codepen">Codepen Profile</a></div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/a-heart-of-many-moods/" class="item" target="_blank">A Heart of Many Moods</a>
+                        <a href="http://bennettcodes.com/dev/fizzy-sparks/" class="item" target="_blank">Fizzy Sparks</a>
+                        <a href="http://bennettcodes.com/dev/wispy-ember/" class="item" target="_blank">Wispy Ember</a>
+                        <a href="http://bennettcodes.com/dev/cosmic-streams-of-paint/" class="item" target="_blank">Cosmic Streams of Paint</a>
+                        <a href="http://bennettcodes.com/dev/sprinkler-duet/" class="item" target="_blank">Sprinkler Duet</a>
+                        <a href="http://bennettcodes.com/dev/canvas-playground3/" class="item" target="_blank">Birthday Streamers</a>
+                        <a href="http://bennettcodes.com/dev/canvas-playground/" class="item" target="_blank">Birthday Particles</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/great-ideas-burn-fuel/" class="item" target="_blank">Great Ideas Burn Fuel</a>
+                        <a href="http://bennettcodes.com/dev/rainbow-plasma/" class="item" target="_blank">Rainbow Plasma</a>
+                        <a href="http://bennettcodes.com/dev/slick-effects/" class="item" target="_blank">Psychedelic Homepage</a>
+                        <a href="http://bennettcodes.com/dev/the-friendly-meteor-shower/" class="item" target="_blank">The Friendly Meteor Shower</a>
+                        <a href="http://bennettcodes.com/dev/collapsing-columns-of-colors/" class="item" target="_blank">Collapsing Columns of Color</a>
+                        <a href="http://bennettcodes.com/dev/canvas-playground4/" class="item" target="_blank">Confetti</a>
+                        <a href="http://bennettcodes.com/dev/daytime-sprites/" class="item" target="_blank">Daytime Sprites</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/canvas-universe/" class="item" target="_blank">Canvas Universe</a>
+                        <a href="http://bennettcodes.com/dev/chaotic-rainbow-symmetry/" class="item" target="_blank">Chaotic Rainbow Symmetry</a>
+                        <a href="http://bennettcodes.com/dev/the-goblet-of-cosmos/" class="item" target="_blank">The Goblet of Cosmos</a>
+                        <a href="http://bennettcodes.com/dev/neon-highway/" class="item" target="_blank">Neon Highway</a>
+                        <a href="http://bennettcodes.com/dev/threads-of-plasma/" class="item" target="_blank">Threads of Plasma</a>
+                        <a href="http://bennettcodes.com/dev/space-travel/" class="item" target="_blank">Space Travel</a>
+                        <a href="http://bennettcodes.com/dev/canvas-playground2/" class="item" target="_blank">Popcorn Particles</a>
+                    </div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-header">React / Redux</div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/bc-react/src/" class="item" target="_blank">React Portfolio</a>
+                        <a href="http://bennettcodes.com/dev/bc-redux/src" class="item" target="_blank">Redux Portfolio</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/redux-test/src/" class="item" target="_blank">Redux Friends List Editor</a>
+                        <a href="http://bennettcodes.com/dev/react-mason/src/" class="item" target="_blank">Vibrant Mason Grid</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/dev/react-waves/src/" class="item" target="_blank">Timer Waves</a>
+                        <a href="http://bennettcodes.com/dev/react-playground/src/" class="item" target="_blank">Component Interaction Test</a>
+                    </div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-header">Websites</div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/sites/full/bennett-plays-live/" class="item" target="_blank">Bennett Plays</a>
+                        <a href="http://bennettcodes.com/" class="item" target="_blank">Bennett Codes</a>
+                        <a href="http://bennettcodes.com/sites/landing/fer-vegas-09-15/" class="item" target="_blank">FER CPE Vegas Landing Page</a>
+                        <a href="http://bennettcodes.com/sites/landing/icdc-national-11-15/" class="item" target="_blank">ICDC College Landing Page</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/sites/full/ifa-dec-15/" class="item" target="_blank">in Focus Advertising</a>
+                        <a href="https://polachecks.com/" class="item" target="_blank">Polacheck's Jewelers</a>
+                        <a href="http://kestrelbiologic.com/" class="item" target="_blank">Kestrel Biologic</a>
+                        <a href="http://cleanroomsplus.com/" class="item" target="_blank">Cleanrooms Plus</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/sites/full/ace-of-spades/" class="item" target="_blank">Ace of Spades</a>
+                        <a href="http://bennettcodes.com/sites/landing/greenpros-facebook-12-15/" class="item" target="_blank">Green Pros Landing Page</a>
+                    </div>
+                </div>
+                <div class="item-group">
+                    <div class="item-group-header">Misc.</div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/sites/full/bc2/" class="item" target="_blank">Personal Site Concept</a>
+                        <a href="http://bennettcodes.com/dev/velocity/transform-test/" class="item" target="_blank">Galactic 3D Cube</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/sites/full/angular-test/weather/" class="item" target="_blank">Angular Weather Checker</a>
+                        <a href="http://bennettcodes.com/dev/cursor-move-events/" class="item" target="_blank">Left and Right Brain Hemispheres</a>
+                    </div>
+                    <div class="item-column">
+                        <a href="http://bennettcodes.com/sites/full/onepage-performance-test/" class="item" target="_blank">Multiple Fullpage Slider</a>
+                        <a href="http://bennettcodes.com/sites/full/corben-optometry/" class="item" target="_blank">Eye Glasses Wizard</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/functions.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

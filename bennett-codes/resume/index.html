@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bennett Codes</title>
+    <script src="../js/jquery.js"></script>
+    <script language=javascript>
+        switch (true) {
+        case (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) && (!(/iPad/i.test(navigator.userAgent))):
+            location.replace("../mobile/index.php#/resume");
+            break;
+        case (!(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) && (/iPad/i.test(navigator.userAgent)):
+            location.replace("../tablet");
+            break;
+        default:
+            location.replace("../index.php#/resume");
+            break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

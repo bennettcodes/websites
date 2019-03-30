@@ -1,0 +1,11 @@
+@media (max-width:768px) {
+#left-arrow, #right-arrow {
+	z-index: 100 !important;
+}
+#left-arrow {
+	left: 0px !important;	
+}
+#right-arrow {
+	right: 0px !important;	
+}
+}
