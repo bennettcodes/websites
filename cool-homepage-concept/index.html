@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>BC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--    <link rel="stylesheet" type="text/css" href="css/style-mobile.css">-->
+    <script type="text/javascript" src="../../js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="../../js/TweenMax.min.js"></script>
+    <script src="../../js/jquery-2.2.4.js"></script>
+    <script src="../../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+    <script src="../../js/imagesloaded.pkgd.min.js"></script>
+    <script language=javascript>
+        switch (true) {
+            //        MOBILE REDIR
+        case (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) && (!(/iPad/i.test(navigator.userAgent))):
+            //            location.replace("../mobile/index.php#");
+            break;
+            //        TABLET REDIR
+        case (!(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))) && (/iPad/i.test(navigator.userAgent)):
+            //            location.replace("../tablet");
+            break;
+            //        DESKTOP REDIR
+        default:
+            //            location.replace("../index.php#");
+            break;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="actual-window"></div>
+    <div id="container">
+        <div id="diag">
+            <p id="diag-direction" class="diag-text"></p>
+            <p id="diag-counter" class="diag-text"></p>
+            <p id="diag-position" class="diag-text"></p>
+            <p id="diag-x" class="diag-text"></p>
+        </div>
+        <div id="overlay"></div>
+        <canvas id="c"></canvas>
+        <div id="header">
+            <h3 id="initials-small">
+                <div class="initial-small-container">
+                    <span class="initial-small" id="first-initial-small">B</span>
+                </div>
+                <div class="initial-small-container">
+                    <span class="initial-small" id="middle-initial-small">L</span>
+                </div>
+                <div class="initial-small-container">
+                    <span class="initial-small" id="last-initial-small">W</span>
+                </div>
+            </h3>
+            <div id="menu">
+                <div id="menu-tap-region"></div>
+                <div id="menu-bg-touchstart" class="menu-bg pointer-events-none"></div>
+                <div id="menu-bg-click" class="menu-bg pointer-events-none"></div>
+                <h3 id="menu-plus" class="pointer-events-none">+</h3>
+                <div id="menu-divider"></div>
+            </div>
+            <div id="menu-items">
+                <div class="menu-item">
+                    <a id="about-link" class="menu-item-tap-region" href="#"></a>
+                    <canvas id="c0" class="menu-item-c"></canvas>
+                    <div class="menu-item-bg"></div>
+                    <div class="menu-item-title-container">
+                        <h5 class="menu-item-title menu-item-stagger">Bennett</h5>
+                    </div>
+                    <div class="menu-item-divider"></div>
+                </div>
+                <div class="menu-item">
+                    <a id="resume-link" class="menu-item-tap-region" href="#"></a>
+                    <canvas id="c1" class="menu-item-c"></canvas>
+                    <div class="menu-item-bg"></div>
+                    <div class="menu-item-title-container">
+                        <h5 class="menu-item-title menu-item-stagger">Skills &amp; Exp</h5>
+                    </div>
+                    <div class="menu-item-divider"></div>
+                </div>
+                <div class="menu-item">
+                    <a id="work-link" class="menu-item-tap-region" href="#"></a>
+                    <canvas id="c2" class="menu-item-c"></canvas>
+                    <div class="menu-item-bg"></div>
+                    <div class="menu-item-title-container">
+                        <h5 class="menu-item-title menu-item-stagger">Portfolio</h5>
+                    </div>
+                    <div class="menu-item-divider"></div>
+                </div>
+                <div class="menu-item">
+                    <a id="codepen-link" class="menu-item-tap-region" href="http://codepen.io/waisbren89"></a>
+                    <canvas id="c3" class="menu-item-c"></canvas>
+                    <div class="menu-item-bg"></div>
+                    <div class="menu-item-title-container">
+                        <h5 class="menu-item-title menu-item-stagger">Codepen</h5>
+                    </div>
+                    <div class="menu-item-divider"></div>
+                </div>
+                <div id="contact-details">
+                    <canvas id="c4" class="menu-item-c"></canvas>
+                    <div id="contact-details-items">
+                        <a class="contact-link" href="tel:818-519-4911">
+                            <h6 id="phone" class="contact-details-item menu-item-stagger">818.519.4911</h6>
+                        </a>
+                        <a class="contact-link" href="mailto:bennettcodes@gmail.com?Subject=Your%20work%20is%20sick!" target="_top">
+                            <h6 id="email" class="contact-details-item menu-item-stagger">BennettCodes@gmail.com</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="header-divider"></div>
+        </div>
+        <div id="menu-items-bg"></div>
+        <div id="hero">
+            <div id="hero-overlay"></div>
+            <div id="hero-content">
+                <canvas id="hero-c"></canvas>
+                <div id="hero-img">
+                    <img id="hero-img-layer-fg-nearest" class="hero-img-layer cache-img" src="images/buildings-nearest.png">
+                    <img id="hero-img-layer-fg-nearer" class="hero-img-layer cache-img" src="images/buildings-nearer.png">
+                    <img id="hero-img-layer-fg-near" class="hero-img-layer cache-img" src="images/buildings-near.png">
+                    <img id="hero-img-layer-mg" class="hero-img-layer cache-img" src="images/buildings-behind-fpo.png">
+                    <!--                    <img id="hero-img-layer-bg" class="hero-img-layer cache-img" src="images/sky-fpo2.jpg">-->
+                </div>
+                <div id="hero-bg" class="sky-gradient"></div>
+            </div>
+        </div>
+        <div id="sections">
+            <div id="about" class="section">
+                <div class="section-bg-container">
+                    <img class="section-bg cache-img" src="images/section1-bg-colorized.jpg">
+                </div>
+                <div id="about-section-inner" class="section-inner">
+                    <div class="section-inner-reel">
+                        <div id="e0" class="section-inner-reel-entry">
+                            <div class="entry-tap-region"></div>
+                            <h4 id="about-header" class="section-header section-stagger">Bennett likes to make weird things.</h4>
+                            <p class="section-paragraph section-stagger">I code seven days a week; sometimes more. I'm a front-end developer with an insatiable drive to create.</p>
+                        </div>
+                        <div class="section-inner-reel-entry">
+                            <div class="entry-tap-region"></div>
+                            <h4>Entry 2</h4>
+                            <p>Other paragraph!</p>
+                        </div>
+                        <div class="section-inner-reel-entry">
+                            <div class="entry-tap-region"></div>
+                            <h4>Entry 3</h4>
+                            <p>Other paragraph!</p>
+                        </div>
+                        <div class="section-inner-reel-entry">
+                            <div class="entry-tap-region"></div>
+                            <h4>Entry 4</h4>
+                            <p>Other paragraph!</p>
+                        </div>
+                        <div class="section-inner-reel-entry">
+                            <div class="entry-tap-region"></div>
+                            <h4>Entry 5</h4>
+                            <p>Other paragraph!</p>
+                        </div>
+                    </div>
+
+                    <!--                    <p class="section-paragraph section-stagger">Duis at tortor libero. Suspendisse tristique nibh in posuere molestie. Sed ac sodales arcu, eget sodales magna. Sed dapibus tincidunt enim, et congue lectus porta ut. Phasellus eu velit in lacus ornare varius tincidunt a dui. Fusce vestibulum mauris vitae est pulvinar, in pulvinar orci finibus. Nam sit amet varius velit. Fusce sed lobortis sapien. Praesent turpis odio, varius non interdum ut, pretium vitae elit. Phasellus orci sapien, vestibulum sit amet lobortis eget, lacinia non libero.</p>-->
+                </div>
+            </div>
+            <div id="resume" class="section">
+                <div class="section-bg-container">
+                    <img class="section-bg cache-img" src="images/section2-bg.jpg">
+                </div>
+
+                <div id="resume-section-inner" class="section-inner">
+                    <h4 class="section-header section-stagger">Skills &amp; Exp</h4>
+                    <div id="skill-bars-container">
+                        <div id="skill-bars" class="section-stagger">
+                            <div id="fe-bar" class="skill-bar">
+                                <div id="fe-bar-fill" class="skill-bar-fill"></div>
+                                <div class="skill-bar-text-container">
+                                    <h6 id="fe-bar-text" class="skill-bar-text">Front-End</h6>
+                                </div>
+                            </div>
+                            <div id="be-bar" class="skill-bar">
+                                <div id="be-bar-fill" class="skill-bar-fill"></div>
+                                <div class="skill-bar-text-container">
+                                    <h6 id="be-bar-text" class="skill-bar-text">Back-End</h6>
+                                </div>
+                            </div>
+                            <div id="d-bar" class="skill-bar">
+                                <div id="d-bar-fill" class="skill-bar-fill"></div>
+                                <div class="skill-bar-text-container">
+                                    <h6 id="d-bar-text" class="skill-bar-text">Design</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="resume-section-inner-content-padding"></div>
+                    <div id="resume-section-inner-content" class="section-inner-content">
+                        <h2 class="section-h2 section-stagger">Senior Web Developer</h2>
+                        <h3 class="section-h3 section-stagger">in Focus Advertising: Advertising Agency</h3>
+                        <h4 class="section-h4 section-stagger">October 2013 - March 2016</h4>
+                        <p class="section-paragraph section-stagger">Take full command of all web-based projects relating to both the front-end and back-end as requested by a diverse catalogue of clients representing a colorful spectrum of industries. Routinely deploy everything from landing pages to full-blown E-commerce solutions complete with responsive design and performance parity across all major browsers and OS’s.</p>
+                        <h2 class="section-h2 section-stagger">Post Production Artist</h2>
+                        <h3 class="section-h3 section-stagger">Graphic Orb: Post-Production Company</h3>
+                        <h4 class="section-h4 section-stagger">April 2013 - July 2013</h4>
+                        <p class="section-paragraph section-stagger">Handle a wide range of assets for film, including resizing thumbnails for Netflix, preparing key art and one-sheets for print, and coding HTML emails with tables.</p>
+                        <h2 class="section-h2 section-stagger">Lead Artist/IT Specialist</h2>
+                        <h3 class="section-h3 section-stagger">Winnol.com: Internet Start-Up</h3>
+                        <h4 class="section-h4 section-stagger">October 2011 - March 2013</h4>
+                        <p class="section-paragraph section-stagger">In charge of site’s user interface and experience. Design materials for mediums spanning both web and print. Help with PC and Mac-related issues.</p>
+                    </div>
+                    <!--
+                    <p class="section-paragraph section-stagger">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non purus scelerisque, placerat orci vel, dignissim sem. Morbi consequat nisl in purus posuere volutpat. In diam dui, laoreet ut eros quis, ornare scelerisque dolor. Vestibulum euismod fringilla turpis ac luctus. Donec nec lorem nec felis luctus consectetur a a felis. Nam malesuada tellus non dictum egestas. Mauris faucibus augue sit amet leo dictum lacinia. Duis accumsan erat dignissim accumsan sagittis. Suspendisse vel ultrices lectus. In suscipit scelerisque tristique. Suspendisse potenti. Aenean semper tincidunt ligula, sit amet tincidunt dui ultrices sit amet.</p>
+                    
+                    <p class="section-paragraph section-stagger">Duis at tortor libero. Suspendisse tristique nibh in posuere molestie. Sed ac sodales arcu, eget sodales magna. Sed dapibus tincidunt enim, et congue lectus porta ut. Phasellus eu velit in lacus ornare varius tincidunt a dui. Fusce vestibulum mauris vitae est pulvinar, in pulvinar orci finibus. Nam sit amet varius velit. Fusce sed lobortis sapien. Praesent turpis odio, varius non interdum ut, pretium vitae elit. Phasellus orci sapien, vestibulum sit amet lobortis eget, lacinia non libero.</p>
+-->
+                </div>
+
+            </div>
+            <div id="work" class="section">
+                <div class="section-bg-container">
+                    <img class="section-bg cache-img" src="images/section3-bg.jpg">
+                </div>
+                <div class="section-inner">
+                    <h4 class="section-header section-stagger">Portfolio</h4>
+
+                    <p class="section-paragraph section-stagger">Banners Placeholder</p>
+
+                    <p class="section-paragraph section-stagger">Billboards Placeholder</p>
+
+                    <p class="section-paragraph section-stagger">Drawings: Cartoons Placeholder</p>
+
+                    <p class="section-paragraph section-stagger">Drawings: Life Placeholder</p>
+
+                    <p class="section-paragraph section-stagger">Drawings: Portraits Placeholder</p>
+
+                    <p class="section-paragraph section-stagger">Eblasts</p>
+
+                    <p class="section-paragraph section-stagger">Flyers &amp; Brochures Placeholder</p>
+
+                    <p class="section-paragraph section-stagger">JavaScript Tests Placeholder</p>
+
+                    <p class="section-paragraph section-stagger">Sites Placeholder</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    <script src="js/rainbow.js"></script>-->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
